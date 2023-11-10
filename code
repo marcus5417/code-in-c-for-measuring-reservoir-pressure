@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstdlib>  // for rand() function
+
+// Simulated function to measure reservoir pressure
+double measureReservoirPressure() {
+    // Simulate reservoir pressure within a certain range
+    double minPressure = 2000.0;
+    double maxPressure = 5000.0;
+
+    // Generate a random pressure within the specified range
+    double pressure = minPressure + (rand() / (RAND_MAX / (maxPressure - minPressure)));
+
+    return pressure;
+}
+
+int main() {
+    // Simulate measuring reservoir pressure
+    double reservoirPressure = measureReservoirPressure();
+
+    // Display the measured reservoir pressure
+    std::cout << "Measured Reservoir Pressure: " << reservoirPressure << " psi" << std::endl;
+
+    return 0;
+}
